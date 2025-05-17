@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:url_launcher/url_launcher.dart';
 
 import 'main.dart';
 
@@ -75,16 +74,9 @@ class HomePage extends StatelessWidget {
           ),
           Expanded(
             flex: 2,
-            child: InkWell(
-              onTap: () {
-               launchUrl( Uri.parse(
-                  "https://www.linkedin.com/in/bashar-shaqour-320b922a7/",
-                ));
-              },
-              child: Text(
+            child: Text(
                 "@Created By Bashar",
                 style: TextStyle(color: Colors.white, fontSize: 30),
-              ),
             ),
           ),
         ],
