@@ -1,6 +1,7 @@
 
 import 'package:avatar_glow/avatar_glow.dart';
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import 'HomePage.dart';
 
@@ -16,13 +17,13 @@ class Splash extends StatelessWidget {
         AvatarGlow(child: Image.asset("assets/tictactoelogo.png",height: 200,width: 200,), ),
         InkWell(
             onTap: () {
-              Uri.parse(
-                "https://www.linkedin.com/in/bashar-shaqour-320b922a7/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_verification_details%3B%2FQt%2BCqYdS%2BaBT1PwZlFADQ%3D%3D",
-              );
+            launchUrl(  Uri.parse(
+                "https://www.linkedin.com/in/bashar-shaqour-320b922a7/",
+              ));
             },
             child: Text(
               "@Created By Bashar",
-              style: TextStyle(color: Colors.white, fontSize: 40),
+              style: TextStyle(color: Colors.white, fontSize: 30),
             ),),
         FilledButton(onPressed: (){Navigator.of(context).push(MaterialPageRoute(builder: (context)=>HomePage()));},style: ButtonStyle(backgroundColor: MaterialStateProperty.all<Color>(Colors.white),), child: Text("Start Game",style: TextStyle(color: Colors.black,fontSize: 30),),)
       ]),)
