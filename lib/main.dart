@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:provider_courses/splash.dart';
-
 import 'HomePage.dart';
 
 void main() {
